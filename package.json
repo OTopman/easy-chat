@@ -7,7 +7,7 @@
     "dev": "nodemon -r tsconfig-paths/register ./src/server.ts",
     "preprod": "cp ./envs/prod.env .env",
     "prod": "nodemon -r tsconfig-paths/register ./src/server.ts",
-    "build": "tsc",
+    "build": "tsc"
   },
   "dependencies": {
     "compression": "^1.7.4",
