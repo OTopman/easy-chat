@@ -1,0 +1,17 @@
+envs/prod.env
+node_modules
+build
+build.zip
+.history
+.vscode
+.env
+.clinic
+protected/*/**/*.png
+protected/*/**/*.jpg
+protected/*/**/*.jpeg
+protected/*/**/*.gif
+package-lock.json
+yarn.lock
+
+logs/errors/*.*
+logs/exceptions/exceptions.log
