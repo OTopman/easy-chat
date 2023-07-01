@@ -8,8 +8,6 @@
     "preprod": "cp ./envs/prod.env .env",
     "prod": "nodemon -r tsconfig-paths/register ./src/server.ts",
     "build": "tsc",
-    "pretest": "cp ./envs/dev.env .env",
-    "test": "npm run dev && artillery run artillery.yaml"
   },
   "dependencies": {
     "compression": "^1.7.4",
