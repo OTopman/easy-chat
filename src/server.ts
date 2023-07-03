@@ -4,6 +4,7 @@ import http from 'http';
 import connectedUsersHandler from './Handlers/connectedUsersHandler';
 import fetchMessagesHandler from './Handlers/fetchMessagesHandler';
 import sendMessageHandler from './Handlers/sendMessageHandler';
+import typingHandler from './Handlers/typingHandler';
 import logger from './Helpers/logger';
 import { AppRepository } from './Models/AppRepository';
 import { AppSocket } from './Services/AppSocket';
@@ -21,6 +22,7 @@ io.on('connection', (socket) => {
   logger.info('New user connected');
 
   socket.on('login', (data) => connectedUsersHandler(data, io));
+  socket.on('typing', (data) => typingHandler(data, io));
   socket.on('send:message', (data) => sendMessageHandler(data, io));
   socket.on('list:message', (data) => fetchMessagesHandler(data, io));
 });
