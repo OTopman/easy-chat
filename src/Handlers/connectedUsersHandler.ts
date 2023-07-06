@@ -14,6 +14,6 @@ export default catchAsync(async (data: any, io: io.Server) => {
   io.emit('users', activeUsers);
 
   //   Fetch messages
-  fetchMessagesHandler({ username }, io);
+  // fetchMessagesHandler({ username }, io);
 });
 
